@@ -48,7 +48,19 @@ var listToArray = function(list) {
 	return numbers;
 };
 
+var prepend = function(number, list) {
+	return {value: number, rest: list};
+};
 
+var nth = function(list, index) {
+	var count = 0;
+	for(var node = list; node; node = node.rest) {
+		if (count === index) {
+			return node.value;
+		}
+		count += 1;
+	} 
+};
 
 
 

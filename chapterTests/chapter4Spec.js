@@ -54,7 +54,7 @@ describe('lists', function() {
 
 	describe('takes a list and a number and returns the element at the given position in the list', function() {
 		it('question 4', function() {
-			var result = nth(arrayToList([10, 20, 30]), 1);
+			var result = nth({value: 10, rest: {value: 20, rest: {value: 30, rest: null}}}, 1);
 			expect(result).toEqual(20);
 		});
 	});
