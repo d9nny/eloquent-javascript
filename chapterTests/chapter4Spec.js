@@ -11,7 +11,7 @@ describe('print range between two numbers with third argument as step', function
 
 	describe('sums an array of numbers', function() {
 		it('question 3', function() {
-			var result = sum(range(1,10));
+			var result = sum([1,2,3,4,5,6,7,8,9,10]);
 			expect(result).toEqual(55);
 		});
 	});
@@ -22,7 +22,7 @@ describe('lists', function() {
 	describe('inverts the order of an array', function() {
 		it('by creating a new array', function() {
 			var result = reverseArray(['A','B','C','D']);
-			expect(result).toEqual('D','C','B','A');
+			expect(result).toEqual(['D','C','B','A']);
 		});
 		it('modifies existing array', function() {
 			var arrayValue = [1,2,3,4,5];
@@ -40,7 +40,7 @@ describe('lists', function() {
 
 	describe('converts a list to an array', function() {
 		it('question 2', function() {
-			var result = listToArray(arrayToList([10,20,30]))
+			var result = listToArray({value: 10, rest: {value: 20, rest: {value: 30, rest: null}}})
 			expect(result).toEqual([10,20,30]);
 		});
 	});
